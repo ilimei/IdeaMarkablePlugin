@@ -80,11 +80,11 @@ public class NavBarModel extends AbstractNavBarModelExtension {
             LogUtil.logSuccess("modelIsnull?" + (model == null));
             editor.getScrollingModel().scrollTo(new LogicalPosition(((MLocationFile) object).getLine(), 1), ScrollType.CENTER);
             return false;
-        } else if (object instanceof PsiFile) {
+        } else if (object instanceof PsiElement) {
                 if(isShowPop) {
                     isShowPop=false;
                 }else{
-                    TextAnalyze.list(((PsiFile) object).getText(), ((PsiFile) object).getProject(), processor);
+                    TextAnalyze.list(((PsiElement) object).getText(), ((PsiElement) object).getProject(), processor);
                 }
         }
         return true;
