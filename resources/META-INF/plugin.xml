@@ -1,0 +1,44 @@
+<idea-plugin version="2">
+  <id>com.dhcc</id>
+  <name>markable plugin</name>
+  <version>1.0</version>
+  <vendor email="514222057@qq.com" url="http://www.yanglimei.com">东华</vendor>
+
+  <description><![CDATA[
+      通过代码中的注释 快速定位<br>
+      <pre>
+        <code>
+          /**
+           * @mark some text
+           */
+        </code>
+      </pre>
+    ]]></description>
+
+  <change-notes><![CDATA[
+      1.创建项目<br>
+    ]]>
+  </change-notes>
+
+  <!-- please see http://www.jetbrains.org/intellij/sdk/docs/basics/getting_started/build_number_ranges.html for description -->
+  <idea-version since-build="141.0"/>
+
+  <!-- please see http://www.jetbrains.org/intellij/sdk/docs/basics/getting_started/plugin_compatibility.html
+       on how to target different products -->
+  <!-- uncomment to enable plugin in all products
+  <depends>com.intellij.modules.lang</depends>
+  -->
+  <depends>com.intellij.modules.lang</depends>
+  <depends>com.intellij.modules.platform</depends>
+
+  <extensions defaultExtensionNs="com.intellij">
+    <!-- Add your extensions here -->
+    <navbar implementation="com.intellij.dhcc.NavBarModel"/>
+  </extensions>
+
+  <actions>
+    <!-- Add your actions here -->
+  </actions>
+
+
+</idea-plugin>
